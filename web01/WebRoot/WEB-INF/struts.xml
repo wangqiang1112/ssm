@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <constant name="struts.action.extension" value="do"/>
+	<include file="struts-default.xml" />
+	<include file="struts-plugin.xml"/>
+    <include file="../struts_config/struts-login.xml" />
+    <include file="../struts_config/struts-user.xml" />
+    
+    
+	<!-- <package name="custom-struts-default" extends="struts-default">
+		<interceptors>
+			<interceptor name="exceptionInterceptor" class="ns.exception.ExceptionInterceptor"/>  
+			<interceptor-stack name="b2cplatPrivInterceptor">
+				<interceptor-ref name="exceptionInterceptor"/>  
+				<interceptor-ref name="defaultStack"/>
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="b2cplatPrivInterceptor"/>
+		<global-results>
+			<result name="error">/404/404.jsp</result>
+		</global-results>
+	</package>
+    <package name="pub" extends="struts-default">
+    	
+		<action name="removeMessage" method="removeMessage" class="ns.common.BaseAction">
+		</action>
+		<action name="uploadFile" class="ns.common.UploadAction">
+		</action>
+		<action name="removeSelected" class="ns.common.BaseAction"></action>
+		<action name="toMessage" class="ns.common.BaseAction">
+			<result name="success">/commons/tomessage.jsp</result>  
+		</action>
+	</package> -->
+ 
+ </struts>
