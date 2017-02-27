@@ -11,6 +11,12 @@
 <html>
 <head>
     <title>用户列表</title>
+    <link rel="stylesheet" href="../resources/ztree/demo.css" type="text/css">
+    <link rel="stylesheet" href="../resources/ztree/zTreeStyle/zTreeStyle.css" type="text/css">
+    <script type="text/javascript" src="../resources/ztree/jquery-1.4.4.min.js"></script>
+    <script type="text/javascript" src="../resources/ztree/jquery.ztree.core.js"></script>
+    <script type="text/javascript" src="../resources/js/user/user.js"></script>
+    
     <style type="text/css">
     	table
 		  {
@@ -41,20 +47,19 @@
                     <td>${id}</td>
                     <td>${name}</td>
                     <td>${age}</td>
-                    <td><a href="#">操作</a></td>
-                    <%-- <td>
-                        <s:if test="#inc.processState==0">
-                          <a class="tbl-td-a" href="early-warning/dispose-incident/toHandle.do?toHandleState=2&incidentId=${incidentId}&processType=2" title="安全事件详情" target="dialog" drawable="false" maxable="false"
-                             minable="false" width="650" height="500" mask="true">详情</a>
-                            <a class="tbl-td-a" href="javascript:void(0);" onclick="editeLevel(this,'${unitId}','${incidentId}');">调整级别</a>
-                            <a class="tbl-td-a" href="early-warning/dispose-incident/handle.do?incidentId=${incidentId}&unitId=${unitId}&classification=${classification}&processState=1&processType=5" target="ajaxTodo" mask="true" title="确定下发该事件吗？">下发</a>
-                            <a class="tbl-td-a" href="early-warning/dispose-incident/handle.do?incidentId=${incidentId}&unitId=${unitId}&classification=${classification}&processState=10&processType=5" target="ajaxTodo" mask="true" title="确定忽略该事件吗？">忽略</a>
-                        </s:if>
-                        
-                    </td> --%>
+                    <td>
+                        <div class="">
+                            <input id="citySel${id}" type="text" readonly value="" style="width:120px;" onclick="showMenu('${id}');"/>
+                            <%--&nbsp;<a id="menuBtn" href="#" onclick="showMenu(); return false;">选择</a>--%>
+                        </div>
+                    </td>
+
                 </tr>
             </s:iterator>
             </tbody>
     </table>
+    <div id="menuContent" class="menuContent" style="display:none; position: absolute;">
+        <ul id="treeDemo" class="ztree" style="margin-top:0; width:160px;"></ul>
+    </div>
 </body>
 </html>

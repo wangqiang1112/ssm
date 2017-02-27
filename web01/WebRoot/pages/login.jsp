@@ -18,7 +18,7 @@
 </head>
 <body>
     <form id="loginform" action="/web01/login/login.do" method="post">
-        <input type="text" name="user.name" id="name" placeholder="请输入用户名"/>
+        <input type="text" name="name" id="name" placeholder="请输入用户名"/>
         <input type="submit" name="btn_login" id="login" value="登录" />
     </form>
 </body>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+	<package namespace="/tags" name="tags" extends="struts-default">
+		
+		<action name="toTags" method="toTags" class="com.htjs.action.tags.TagsAction">
+			<result name="success">/pages/tags/tags.jsp</result>
+		</action>
+		
+		<action name="tag_action" method="tag_action" class="com.htjs.action.tags.TagsAction">
+		</action>
+		
+	</package>
+</struts>

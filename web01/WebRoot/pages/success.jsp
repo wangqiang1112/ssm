@@ -12,7 +12,9 @@
     <title>用户列表</title>
 </head>
 <body>
-    登陆成功！！！<br>
- <a href="/web01/user/userList.do">点击此处</a>跳转到用户列表
+    ${name} 登陆成功！！！<br>
+ <a href="/web01/user/userList.do">用户列表</a><br>
+ <a href="/web01/file/toFilePage.do">文件处理</a><br>
+ <a href="/web01/tags/toTags.do">TAGS页</a><br>
 </body>
 </html>

@@ -43,6 +43,10 @@ public class BaseAction extends ActionSupport{
     protected Object getSessionAttribute(String s) {
         return getSession().getAttribute(s);
     }
+    
+    protected String getSavePath(){
+    	return ServletActionContext.getServletContext().getRealPath("/upload");
+    }
 
     protected List<Map<String, Object>> map(List<Map<String, Object>> list, final String[] keys) {
         Collection collection = CollectionUtils.collect(list, new Transformer() {
