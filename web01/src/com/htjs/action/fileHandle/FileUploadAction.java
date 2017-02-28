@@ -31,7 +31,7 @@ public class FileUploadAction extends BaseAction{
         byte[] buffer = new byte[1024];
         int len = 0;
         while((len=fis.read(buffer))!=-1){
-            fos.write(buffer);;
+            fos.write(buffer);
         }
         fos.close();
         fis.close();

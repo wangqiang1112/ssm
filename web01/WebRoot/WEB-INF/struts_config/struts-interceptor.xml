@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+	<package namespace="/interceptor" name="myInterceptor" extends="json-default">
+		<interceptors>
+			<interceptor name="my" class="com.htjs.action.interceptor.MyInterceptor"></interceptor>
+		</interceptors>
+		
+		<action name="toInterceptor"  
+            class="com.htjs.action.interceptor.TestAction">  
+            <result>/pages/interceptor/interceptor.jsp</result> 
+            <interceptor-ref name="my"></interceptor-ref>
+            
+            <!-- struts中的拦截器defaultStack必须引用，否则该action中只有my一个拦截器 -->
+            <interceptor-ref name="defaultStack"></interceptor-ref> 
+        </action>
+		
+	</package>
+</struts>

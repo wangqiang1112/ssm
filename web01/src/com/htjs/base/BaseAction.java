@@ -92,7 +92,8 @@ public class BaseAction extends ActionSupport{
         });
         return (List<Map<String, Object>>) collection;
     }
+    
 
-    protected static final String MSG_OK = "操作成功！";
+	protected static final String MSG_OK = "操作成功！";
     protected static final String MSG_ERROR = "操作失败!";
 }
