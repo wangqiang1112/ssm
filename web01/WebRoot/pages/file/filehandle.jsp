@@ -28,12 +28,20 @@
                     //$("#imageify").uploadify("settings","formData",{'name':'lmy1'}); //动态指定参数
                 } ,
                 'onUploadSuccess' : function(file, data, response) {   //上传成功后触发的事件
-                	$("#queue a").html(file.name);
+                	$("#queue").append('<a>'+file.name+'</a>&nbsp;&nbsp;');
                 	$("#queue a").attr("href","/web01/file/download.do?fileFileName="+file.name);
                 	$('#' + file.id).find('.data').html(' - 完成');
                 	//根据html页面自定义编写取消函数
                 	$('#' + file.id + ' .cancel a').click(function(){
-		            	alert(file.name);
+		            	var aLists = $("#queue a");
+		            	aLists.each(function(index,ele){
+		            		if(aLists[index].innerText == file.name){
+		            			$(ele).remove();
+		            		}
+		            	});
+		            	if($("#queue a").length == 0){
+		            		$("#queue").html("");
+		            	}
 		            })
                     //alert("上传成功");
                     /* alert( 'id: ' + file.id+ ' - 索引: ' + file.index+ ' - 文件名: ' + file.name  
@@ -57,8 +65,8 @@
     </script>
 </head>
 <body>
+    <div id="queue"></div> <!-- 上传文件存放的地方，ID为queue -->
 	<input id="imageify" name="imageify" type="file"/>
-    <div id="queue"><a></a></div> <!-- 上传文件存放的地方，ID为queue -->
 <a href="javascript:$('#imageify').uploadify('cancel')">Cancel First File</a> 
 <a href="javascript:$('#imageify').uploadify('cancel', '*')">Clear the Queue</a> 
 <a href="javascript:$('#imageify').uploadify('upload', '*')">Upload the Files</a>

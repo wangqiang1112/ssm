@@ -100,7 +100,7 @@ Released under the MIT License <http://www.opensource.org/licenses/mit-license.p
 					uploader : 'uploadify.php',  // The path to the server-side upload script
 					
 					// Options
-					auto            : true,               // Automatically upload files when added to the queue
+					auto            : false,               // Automatically upload files when added to the queue
 					buttonClass     : '',                 // A class name to add to the browse button DOM object
 					buttonCursor    : 'hand',             // The cursor to use with the browse button
 					buttonImage     : null,               // (String or null) The path to an image to use for the Flash browse button if not using CSS to style the button
@@ -303,7 +303,6 @@ Released under the MIT License <http://www.opensource.org/licenses/mit-license.p
 
 		// Stop a file upload and remove it from the queue 
 		cancel : function(fileID, supressEvent) {
-
 			var args = arguments;
 
 			this.each(function() {
@@ -972,7 +971,6 @@ Released under the MIT License <http://www.opensource.org/licenses/mit-license.p
 	}
 
 	$.fn.uploadify = function(method) {
-
 		if (methods[method]) {
 			return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
 		} else if (typeof method === 'object' || !method) {
