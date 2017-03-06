@@ -13,5 +13,7 @@
 		
 		<action name="fileUpload" method="fileUpload" class="com.htjs.action.fileHandle.FileUploadAction">    
         </action>
+		<action name="download" method="download" class="com.htjs.action.fileHandle.FileUploadAction">    
+        </action>
 	</package>
 </struts>

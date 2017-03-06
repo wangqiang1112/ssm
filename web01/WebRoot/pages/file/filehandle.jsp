@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Administrator
-  Date: 2017/2/7
-  Time: 11:38
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head> 
@@ -15,7 +8,7 @@
     <script type="text/javascript">
         $(document).ready(function(){
             $("#imageify").uploadify({
-            	'auto' : false,
+            	auto : false,
                 'fileObjName' : 'file', //提交时候的字段名，和struts2里面用来接收File的字段名一致
                 'method' : 'post',            //以get方式上传
                 
@@ -35,6 +28,9 @@
                     //$("#imageify").uploadify("settings","formData",{'name':'lmy1'}); //动态指定参数
                 } ,
                 'onUploadSuccess' : function(file, data, response) {   //上传成功后触发的事件
+                	$("#queue a").html(file.name);
+                	$("#queue a").attr("href","/web01/file/download.do?fileFileName="+file.name);
+                	$('#' + file.id).find('.data').html(' - 完成');
                     //alert("上传成功");
                     /* alert( 'id: ' + file.id+ ' - 索引: ' + file.index+ ' - 文件名: ' + file.name  
                     + ' - 文件大小: ' + file.size+ ' - 类型: ' + file.type+ ' - 创建日期: ' + file.creationdate  
@@ -57,7 +53,7 @@
 </head>
 <body>
 	<input id="imageify" name="imageify" type="file"/>
-    <div id="queue"></div> <!-- 上传文件存放的地方，ID为queue -->
+    <div id="queue"><a></a></div> <!-- 上传文件存放的地方，ID为queue -->
 <a href="javascript:$('#imageify').uploadify('cancel')">Cancel First File</a> 
 <a href="javascript:$('#imageify').uploadify('cancel', '*')">Clear the Queue</a> 
 <a href="javascript:$('#imageify').uploadify('upload', '*')">Upload the Files</a>

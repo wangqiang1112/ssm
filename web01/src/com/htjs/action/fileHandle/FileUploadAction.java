@@ -4,6 +4,8 @@ import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
+import javax.servlet.http.HttpServletResponse;
+
 import org.apache.commons.io.FileUtils;
 import org.apache.struts2.ServletActionContext;
 
@@ -40,6 +42,28 @@ public class FileUploadAction extends BaseAction{
     
     public String toFilePage(){
     	return "success";
+    }
+    
+    public void download(){
+    	try{
+    		InputStream is = new FileInputStream(getSavePath()+"\\"+fileFileName);
+        	HttpServletResponse response = ServletActionContext.getResponse();
+        	response.reset(); // 必要地清除response中的缓存信息
+    		response.setHeader("Content-Disposition", "attachment;filename="+ fileFileName);
+    		response.setContentType("application/data");//根据个人需要,这个是下载文件的类型
+    		javax.servlet.ServletOutputStream out = response.getOutputStream();
+    		byte[] content = new byte[1024];
+    		int length = 0;
+    		while ((length = is.read(content)) != -1) {
+    		out.write(content, 0, length);
+    		}
+    		out.write(content);
+    		out.flush();
+    		out.close();
+    	}catch(Exception e){
+    		e.printStackTrace();
+    	}
+    	
     }
 
     
