@@ -31,6 +31,10 @@
                 	$("#queue a").html(file.name);
                 	$("#queue a").attr("href","/web01/file/download.do?fileFileName="+file.name);
                 	$('#' + file.id).find('.data').html(' - 完成');
+                	//根据html页面自定义编写取消函数
+                	$('#' + file.id + ' .cancel a').click(function(){
+		            	alert(file.name);
+		            })
                     //alert("上传成功");
                     /* alert( 'id: ' + file.id+ ' - 索引: ' + file.index+ ' - 文件名: ' + file.name  
                     + ' - 文件大小: ' + file.size+ ' - 类型: ' + file.type+ ' - 创建日期: ' + file.creationdate  
@@ -45,6 +49,7 @@
 		            alert('The file ' + file.name + ' was cancelled.');
 		        }   
             });
+            
             
             
         });
