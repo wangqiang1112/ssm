@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+	<package namespace="/erweima" name="erweima" extends="struts-default">
+		
+		<action name="toErweima" method="toErweima" class="com.htjs.action.erweima.ErweimaAction">
+			<result name="success">/pages/erweima/erweima.jsp</result>
+		</action>
+		<action name="code" method="code" class="com.htjs.action.erweima.ErweimaAction">
+			<result name="stream" type="stream">  
+                <param name="inputName">inputStream</param>  
+                <param name="contentType">image</param>  
+            </result> 
+		</action>
+		
+		
+	</package>
+</struts>

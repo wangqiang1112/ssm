@@ -17,6 +17,8 @@
     <include file="../struts_config/struts-tags.xml" />
     <include file="../struts_config/struts-json.xml" />
     <include file="../struts_config/struts-interceptor.xml" />
+    <include file="../struts_config/struts-tab.xml" />
+    <include file="../struts_config/struts-erweima.xml" />
 
     
 	<!-- <package name="custom-struts-default" extends="struts-default">
