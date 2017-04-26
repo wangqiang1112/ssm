@@ -22,7 +22,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	-->
 	<script type="text/javascript" src="resources/js/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript">
-		function aclick(t){
+		function aclick(t){//此处可以结合ztree中的点击事件来实现
 			var th = $(t);
 			th.attr("href","/web01/pages/leftMenue/chap2.jsp");
 		}
