@@ -24,9 +24,9 @@ public class LoginAction extends BaseAction{
     public String login() {
     	Map<String,Object> parameterMap = new HashMap<String, Object>();
     	String name = getRequest().getParameter("name");
-    	System.out.println("登陆action="+name);
+//    	System.out.println("登陆action="+name);
     	parameterMap.put("name", name);
-    	log.info("登陆=====");
+//    	log.info("登陆=====");
     	addRequestAttribute("parameterMap", parameterMap);
     	
     	addRequestAttribute("name", "name==");

@@ -28,13 +28,13 @@ public class LoginFilter implements Filter{
 		/*Map map = (Map) req.getSession().getAttribute("parameterMap");
 		System.out.println("session中name="+map.get("name").toString());*/
 		String name = req.getParameter("name");
-		System.out.println("过滤器"+name);
+//		System.out.println("过滤器"+name);
 		if(name == null || "".equals(name)){
-			System.out.println("用户名为空");
+//			System.out.println("用户名为空");
 			//res.sendRedirect("/web01/pages/login.jsp");
 			arg2.doFilter(req, res);
 		}else{
-			System.out.println("用户名="+name);
+//			System.out.println("用户名="+name);
 			arg2.doFilter(req, res);
 			return;
 		}
@@ -42,7 +42,7 @@ public class LoginFilter implements Filter{
 
 	@Override
 	public void init(FilterConfig arg0) throws ServletException {
-		System.out.println("过滤器init");
+//		System.out.println("过滤器init");
 		
 	}
 

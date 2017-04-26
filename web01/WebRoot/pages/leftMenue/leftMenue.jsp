@@ -3,18 +3,14 @@
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+String path1 = request.getContextPath()+"/pages/leftMenue/";
 %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-  <head>
-    <base href="<%=basePath%>">
-    <title>Tags page</title>
-    
-  </head>
+<frameset cols="200,*">
+  <frame src="<%=path1 %>menue.jsp">
+  <frame src="<%=path1 %>pref.jsp" name="view_frame">
   
-  <body>
-    <img  style="border: 1px solid #00f" title="hello" src="/web01/erweima/code.do" width="200px" height="200px" />
-    
-  </body>
+</frameset> 
 </html>

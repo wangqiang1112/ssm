@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+	<package namespace="/picYulan" name="picYulan" extends="struts-default">
+		
+		<action name="toPicYulan" method="toPicYulan" class="com.htjs.action.picYulan.PicYulanAction">
+			<result name="success">/pages/picYulan/picYulan.jsp</result>
+		</action>
+		
+		
+	</package>
+</struts>

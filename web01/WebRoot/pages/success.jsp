@@ -20,5 +20,7 @@
  <a href="/web01/interceptor/toInterceptor.do">自定义拦截器</a><br>
  <a href="/web01/tab/toTab.do">TAB页</a><br>
  <a href="/web01/erweima/toErweima.do">二维码</a><br>
+ <a href="/web01/picYulan/toPicYulan.do">图片动态上传预览</a><br>
+ <a href="/web01/leftMenue/toLeftMenue.do">左菜单</a><br>
 </body>
 </html>
