@@ -19,6 +19,9 @@
     <include file="../struts_config/struts-interceptor.xml" />
     <include file="../struts_config/struts-tab.xml" />
     <include file="../struts_config/struts-erweima.xml" />
+    <include file="../struts_config/struts-picYulan.xml" />
+    <include file="../struts_config/struts-leftMenue.xml" />
+    <include file="../struts_config/struts-fileUpload.xml" />
 
     
 	<!-- <package name="custom-struts-default" extends="struts-default">

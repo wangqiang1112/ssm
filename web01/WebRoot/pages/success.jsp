@@ -22,5 +22,7 @@
  <a href="/web01/erweima/toErweima.do">二维码</a><br>
  <a href="/web01/picYulan/toPicYulan.do">图片动态上传预览</a><br>
  <a href="/web01/leftMenue/toLeftMenue.do">左菜单</a><br>
+ <a href="/web01/leftMenue/toTanKuang.do">自制弹框</a><br>
+ <a href="/web01/fileUpload/toFileUpload.do">文件上传下载</a><br>
 </body>
 </html>

@@ -5,4 +5,8 @@ public class LeftMenueAction {
 	public String toLeftMenue(){
 		return "success";
 	}
+	
+	public String toTanKuang(){
+		return "success";
+	}
 }

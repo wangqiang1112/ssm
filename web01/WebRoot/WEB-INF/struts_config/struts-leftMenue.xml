@@ -11,6 +11,10 @@
 			<result name="success">/pages/leftMenue/leftMenue.jsp</result>
 		</action>
 		
+		<action name="toTanKuang" method="toTanKuang" class="com.htjs.action.leftMenue.LeftMenueAction">
+			<result name="success">/pages/tankuang/tankuang.jsp</result>
+		</action>
+		
 		
 	</package>
 </struts>

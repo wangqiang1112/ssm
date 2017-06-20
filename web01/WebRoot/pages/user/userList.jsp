@@ -29,6 +29,8 @@
 		  border:1px solid black;
 		  }
 		td {text-align: center;}
+		
+		table head{backgroud:blue;}
     </style>
 </head>
 <body>
